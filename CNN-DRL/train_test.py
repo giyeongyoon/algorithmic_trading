@@ -23,7 +23,8 @@ def train(data_source, start_date, end_date, time_interval,
         data_source=data_source,
         start_date=start_date,
         end_date=end_date,
-        time_interval=time_interval
+        time_interval=time_interval,
+        **kwargs
     )
     price_array, tech_array, turbulence_array = DP.run(
         ticker_list=ticker_list,
@@ -101,7 +102,8 @@ def test(data_source, start_date, end_date, time_interval,
         data_source=data_source,
         start_date=start_date,
         end_date=end_date,
-        time_interval=time_interval
+        time_interval=time_interval,
+        **kwargs
     )
     price_array, tech_array, turbulence_array = DP.run(
         ticker_list=ticker_list,
